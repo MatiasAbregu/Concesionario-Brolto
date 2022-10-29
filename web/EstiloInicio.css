@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+}
+
+header{
+    background-color:  black;
+    max-height: 25vh;
+    display: flex;
+    color: white;
+}
+
+#Logo{
+    margin-top: -3vh;
+    width: 30vh;
+    height: 30vh;
+    margin-left: 3vh;
+}
+
+nav ul li{
+    font-size: 4vh;
+    margin: 8vh 2vh;
+    display: inline-block;
+    list-style: none;
+}
