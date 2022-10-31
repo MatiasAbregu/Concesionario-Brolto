@@ -1,24 +1,58 @@
+html{
+    font-family: 'Teko', sans-serif;
+}
+
 body{
     margin: 0;
 }
 
 header{
-    background-color:  black;
-    max-height: 25vh;
-    display: flex;
+    background-color: black;
+    max-height: 21vh;
     color: white;
 }
 
 #Logo{
     margin-top: -3vh;
-    width: 30vh;
-    height: 30vh;
+    width: 28vh;
+    height: 28vh;
     margin-left: 3vh;
 }
 
+header nav{
+    float: right;
+}
+
 nav ul li{
-    font-size: 4vh;
-    margin: 8vh 2vh;
+    font-size: 5vh;
+    margin: 5.5vh 2vh;
     display: inline-block;
     list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    transition: ease-out 0.3s;
+    color: white;
+}
+
+nav ul li a:hover{
+    border-left: solid 0.5vh #2271B3;
+    color: #2271B3;
+}
+
+#fondoAutos{
+    margin-top: -5vh;
+    min-height: 70vh;
+    background: url(img/FotoConcesionario.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#fondoAutos h2{
+    margin-left: 2vh;
+    font-size: 6vh;
+    color: white;
 }
