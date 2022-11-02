@@ -93,9 +93,23 @@ nav ul li a:hover{
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(34, 113, 179, 1), rgba(0, 0, 0, 0));
 }
 
+.articuloAutos{
+    text-align: center;
+    width: 100%;
+    font-size: 3vh;
+}
+
 .imagenesNaveg{
     margin-top: 4vh;
     border: 0.6vh solid black;
     border-radius: 3vh;
-    width: 45%;
+    width: 50%;
+}
+
+#GrupoRadio{
+    text-align: center;
+}
+
+#novChev, #novBMW, #novAudi, #novPorsche {
+    display: none;
 }

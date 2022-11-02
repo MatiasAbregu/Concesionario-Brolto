@@ -11,6 +11,7 @@
     </head>
 
     <body>
+        <script src="Codigo1.js"></script>
         <header>
             <a href="Inicio.html"><img src="img/ConcesionarioBroltoBlanco.png" id="Logo"/></a>
             <nav>
@@ -36,25 +37,32 @@
 
         <section>
             <h2 id="tituloNovedades">NOVEDADES</h2>
-            <article class="articuloAutos">
+            <article class="articuloAutos" id="novFord">
                 <img class="imagenesNaveg" src="img/FordMustang.png"/>
                 <h2>Lleva hoy uno de los mejores y más vendidos coches deportivos: Ford Mustang (2022)</h2>
             </article>
-            <article class="articuloAutos">
+            <article class="articuloAutos" id="novChev">
                 <img class="imagenesNaveg" src="img/ChevroletCamaro.png"/>
                 <h2>Uno de los coches deportivos más imponentes y equilibrados del mercado: Chevrolet Camaro (2022)</h2>
             </article>
-            <article class="articuloAutos">
+            <article class="articuloAutos" id="novBMW">
                 <img class="imagenesNaveg" src="img/BMW_Serie_2_Coupe.png"/>
                 <h2>Elegante y rápido, llega para hacer gala de su belleza: BMW Serie 2 Coupe 2022</h2>
             </article>
-            <article class="articuloAutos">
+            <article class="articuloAutos" id="novAudi">
                 <img class="imagenesNaveg" src="img/AUDI-E-TRON-GT.png"/>
                 <h2>Audi nos impresiona con su nuevo coche deportivo eléctrico: E-Tron GT 2022</h2>
             </article>
-            <article class="articuloAutos">
+            <article class="articuloAutos" id="novPorsche">
                 <img class="imagenesNaveg" src="img/porsche-taycan-gts-2022.png"/>
                 <h2>Este coche deportivo excelente por su rendimiento y prestigioso por su gran marca: Porsche Taycan GTS 2022</h2>
+            </article>
+            <article id="GrupoRadio">
+                <input type="radio" id="radioFord" name="radios" onchange="seleccion(1);" checked="true"/>
+                <input type="radio" id="radioChev" name="radios" onchange="seleccion(2);"/>
+                <input type="radio" id="radioBMW" name="radios" onchange="seleccion(3);"/>
+                <input type="radio" id="radioAudi" name="radios" onchange="seleccion(4);"/>
+                <input type="radio" id="radioPorsche" name="radios" onchange="seleccion(5);"/>
             </article>
         </section>
 
