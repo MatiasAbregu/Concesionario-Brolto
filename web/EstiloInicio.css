@@ -25,7 +25,7 @@ header nav{
 
 nav ul li{
     font-size: 5vh;
-    margin: 5.5vh 2vh;
+    margin: 5.5vh 4vh;
     display: inline-block;
     list-style: none;
 }
@@ -37,13 +37,13 @@ nav ul li a{
 }
 
 nav ul li a:hover{
+    padding-left: 1vh;
     border-left: solid 0.5vh #2271B3;
     color: #2271B3;
 }
 
 #fondoAutos{
-    margin-top: -5vh;
-    min-height: 70vh;
+    height: 75vh;
     background: url(img/FotoConcesionario.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -52,7 +52,50 @@ nav ul li a:hover{
 }
 
 #fondoAutos h2{
+    width: 140vh;
+    border-left: solid 3vh #2271B3;
+    padding-left: 2vh;
+    margin: 0;
     margin-left: 2vh;
     font-size: 6vh;
     color: white;
+    background-color: rgba(0,0,0, 0.5);
+}
+
+#botonCatalogo{
+    border: 0.2vh white solid;
+    border-radius: 5vh;
+    padding: 2vh;
+    margin-left: 5vh;
+    text-align: center;
+    width: 40vh;
+    font-size: 5vh;
+    color: white;
+    background-color: #2271B3;
+    transition: ease 0.5s;
+}
+
+#botonCatalogo:hover{
+    cursor: pointer;
+    border-radius: 3vh;
+    background-color: rgb(64, 133, 199);
+    box-shadow: 0vh 0vh 2vh white;
+}
+
+#tituloNovedades{
+    text-decoration: underline;
+    margin: 0;
+    text-align: center;
+    color: white;
+    font-size: 6vh;
+    padding: 5vh 0;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(34, 113, 179, 1), rgba(0, 0, 0, 0));
+}
+
+.imagenesNaveg{
+    margin-top: 4vh;
+    border: 0.6vh solid black;
+    border-radius: 3vh;
+    width: 45%;
 }
