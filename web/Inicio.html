@@ -29,14 +29,14 @@
                 <br><br><br>
                 <h2>¿En busca de nuevas experiencias? <br> ¡No lo pienses más y compra el vehiculo que te acompañará en tus aventuras!</h2>
                 <br><br><br>
-                <button type="button" onclick="" id="botonCatalogo">Catálogo</button>
+                <button type="button" onclick="window.location.href = 'Catalogo.jsp'" id="botonCatalogo">Catálogo</button>
             </article>
         </section>
 
         <br>
 
         <section>
-            <h2 id="tituloNovedades">NOVEDADES</h2>
+            <h2 class="titulos" id="tituloNovedades">NOVEDADES</h2>
             <article class="articuloAutos" id="novFord">
                 <img class="imagenesNaveg" src="img/FordMustang.png"/>
                 <h2>Lleva hoy uno de los mejores y más vendidos coches deportivos: Ford Mustang (2022)</h2>
@@ -58,12 +58,31 @@
                 <h2>Este coche deportivo excelente por su rendimiento y prestigioso por su gran marca: Porsche Taycan GTS 2022</h2>
             </article>
             <article id="GrupoRadio">
+                <label class="custom-boton">
                 <input type="radio" id="radioFord" name="radios" onchange="seleccion(1);" checked="true"/>
+                <span class="checkmark"></span>
+                </label>
+                <label class="custom-boton">
                 <input type="radio" id="radioChev" name="radios" onchange="seleccion(2);"/>
+                <span class="checkmark"></span>
+                </label>
+                <label class="custom-boton">
                 <input type="radio" id="radioBMW" name="radios" onchange="seleccion(3);"/>
+                <span class="checkmark"></span>
+                </label>
+                <label class="custom-boton">
                 <input type="radio" id="radioAudi" name="radios" onchange="seleccion(4);"/>
+                <span class="checkmark"></span>
+                </label>
+                <label class="custom-boton">
                 <input type="radio" id="radioPorsche" name="radios" onchange="seleccion(5);"/>
+                <span class="checkmark"></span>
+                </label>
             </article>
+        </section>
+        
+        <section>
+            <h2 class="titulos" id="MarcasDeAutos">Marcas de autos</h2>
         </section>
 
         <footer></footer>
