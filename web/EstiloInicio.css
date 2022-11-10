@@ -4,6 +4,8 @@ html{
 
 body{
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 header{
@@ -51,6 +53,7 @@ nav ul li a:hover{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
 }
 
 #fondoAutos h2{
@@ -84,13 +87,13 @@ nav ul li a:hover{
     box-shadow: 0vh 0vh 2vh white;
 }
 
-#tituloNovedades{
+.titulos{
     text-decoration: underline;
     margin: 0;
     text-align: center;
     color: white;
-    font-size: 6vh;
-    padding: 5vh 0;
+    font-size: 8vh;
+    padding: 4vh 0;
     width: 100%;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(34, 113, 179, 1), rgba(0, 0, 0, 0));
 }
@@ -111,7 +114,7 @@ nav ul li a:hover{
 #GrupoRadio{
     display: flex;
     justify-content: center;
-    margin-bottom: 1vh;
+    margin-bottom: 3vh;
 }
 
 #novChev, #novBMW, #novAudi, #novPorsche {
@@ -131,11 +134,10 @@ nav ul li a:hover{
 
 .custom-boton .checkmark{
     width: calc(100% - 4px);
-    height: calc(100% - 4px);
+    height: calc(100% - 3.5px);
     background-color: black;
     border-radius: 50%;
     opacity: 0;
-    transition: opacity 0.5s ease;
     display: none;
 }
 
@@ -146,4 +148,67 @@ nav ul li a:hover{
 .custom-boton input:checked + .checkmark{
     opacity: 1;
     display: inline-block;
+}
+
+#logosCenter{
+    margin-top: 5vh;
+    margin-bottom: 4vh;
+    text-align: center;
+}
+
+#tituloDePresentacionLogos{
+    text-align: center;
+    font-size: 6vh;
+}
+
+.logos{
+    border: 1vh solid #2271B3;
+    margin-left: 5vh;
+    border-radius: 50%;
+    background-image: linear-gradient(90deg, black, white);
+    transition: 0.5s ease;
+}
+
+.logos:hover{
+    cursor: pointer;
+    border-radius: 25%;
+}
+
+#porqueConfiar{
+    padding: 9vh 0vh;
+    background: url(img/concesionaria.png) no-repeat center center fixed;
+    text-align: center;
+}
+
+#porqueConfiar p{
+    margin: 0vh 5vh;
+    color: white;
+    background-color: rgba(0,0,0, 0.5);
+    font-size: 6vh;
+    border-left: solid 3vh #2271B3;
+}
+
+footer{
+    font-size: 5vh;
+    background-color: black;
+}
+
+footer p{
+    color: white;
+    margin-left: 5vh;
+    float: left;
+}
+
+
+footer a{
+    color: white;
+    float: right;
+    margin-right: 5vh;
+    margin-top: 4.7vh;
+    text-decoration: none;
+    transition: ease-out 0.4s;
+}
+
+footer a:hover{
+    color: #2271B3;
 }
