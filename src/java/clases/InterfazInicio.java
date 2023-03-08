@@ -15,6 +15,7 @@ public class InterfazInicio extends javax.swing.JFrame {
         initComponents();
         setTitle("Inicio Sesión - Brolto");
         setLocationRelativeTo(null);
+        setResizable(false);
 
         ImageIcon logoIcono = new ImageIcon("src/java/img/ConcesionarioBroltoBlanco.png");
         Icon iconoL = new ImageIcon(logoIcono.getImage().getScaledInstance(labelLogo.getWidth(), labelLogo.getHeight(), Image.SCALE_DEFAULT));
@@ -114,7 +115,7 @@ public class InterfazInicio extends javax.swing.JFrame {
         body.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         body.add(labelLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 190, 180));
 
-        leyendaInicio.setFont(new java.awt.Font("Britannic Bold", 0, 24)); // NOI18N
+        leyendaInicio.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         leyendaInicio.setForeground(new java.awt.Color(255, 255, 255));
         leyendaInicio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         leyendaInicio.setText("INICIO SESIÓN");
@@ -136,20 +137,20 @@ public class InterfazInicio extends javax.swing.JFrame {
         campoContra.setCaretColor(new java.awt.Color(204, 204, 204));
         body.add(campoContra, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, 190, 22));
 
-        etiquetaContra.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
+        etiquetaContra.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         etiquetaContra.setForeground(new java.awt.Color(255, 255, 255));
         etiquetaContra.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         etiquetaContra.setText("Contraseña:");
         body.add(etiquetaContra, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 110, 20));
 
-        etiquetaUsuario.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
+        etiquetaUsuario.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         etiquetaUsuario.setForeground(new java.awt.Color(255, 255, 255));
         etiquetaUsuario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         etiquetaUsuario.setText("Usuario:");
         body.add(etiquetaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 80, 20));
 
         IniciarSesion.setBackground(new java.awt.Color(51, 51, 51));
-        IniciarSesion.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
+        IniciarSesion.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         IniciarSesion.setForeground(new java.awt.Color(255, 255, 255));
         IniciarSesion.setText("Iniciar Sesion");
         IniciarSesion.setFocusable(false);
@@ -250,7 +251,9 @@ public class InterfazInicio extends javax.swing.JFrame {
             ResultSet rs = pst.executeQuery();
             
             if(rs.next()){
-                JOptionPane.showMessageDialog(null, "¡Se ha iniciado sesión!");
+                this.dispose();
+                InterfazCRUD interfaz1 = new InterfazCRUD(rs.getString(2));
+                interfaz1.setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(null, "¡El usuario o la contraseña es incorrecto!");
             }
