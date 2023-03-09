@@ -2,6 +2,11 @@ package clases;
 
 import java.awt.*;
 import java.io.*;
+import java.nio.file.*;
+import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.sql.rowset.serial.SerialBlob;
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
@@ -427,8 +432,37 @@ public class VentanaCrear extends javax.swing.JFrame {
     }//GEN-LAST:event_CrearMouseEntered
 
     private void CrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearActionPerformed
-        if (textModelo.getText() != null && textMarca.getText() != null && textDescripcion.getText() != null && imagenSeleccionada != null) {
-
+        if (textModelo.getText() != null && textMarca.getText() != null && textDescripcion.getText() != null && imagenSeleccionada != null) {  
+            
+            try{
+                byte[] bytes = Files.readAllBytes(Paths.get(imagenSeleccionada.getAbsolutePath()));
+                Blob imagenBlob = new SerialBlob(bytes);
+                
+                Conexion cn = new Conexion();
+                PreparedStatement pst = cn.conectar().prepareStatement("insert into vehiculos(Modelo, Marca, Descripcion, Imagen) values (?, ?, ?, ?)");
+                
+                pst.setString(1, textModelo.getText());
+                pst.setString(2, textMarca.getText().trim());
+                pst.setString(3, textDescripcion.getText());
+                pst.setBlob(4, imagenBlob);
+                
+                pst.executeUpdate();
+                
+            }catch(SQLException e){
+                JOptionPane.showMessageDialog(null, "¡Hubo un error en la base de datos!");
+                System.out.println(e);
+            } catch (IOException ex) {
+                Logger.getLogger(VentanaCrear.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+            JOptionPane.showMessageDialog(null, "¡Se creó con éxito!");
+            textModelo.setText("");
+            textMarca.setText("");
+            textDescripcion.setText("");
+            VistaImagen.setText("Aqui se cargara la imagen");
+            imagenSeleccionada = null;
+            VistaImagen.setIcon(null);
+            
         } else {
             JOptionPane.showMessageDialog(null, "¡No se pudo completar la operación porque un campo no se rellenó!");
         }
