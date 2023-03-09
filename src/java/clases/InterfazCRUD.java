@@ -143,7 +143,7 @@ public class InterfazCRUD extends javax.swing.JFrame {
         leyenda.setFont(new java.awt.Font("Arial", 2, 12)); // NOI18N
         leyenda.setForeground(new java.awt.Color(255, 255, 255));
         leyenda.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        leyenda.setText("© Derechos reservados a Matias Abregú - 2022");
+        leyenda.setText("© Derechos reservados a Matias Abregú - 2023");
         body.add(leyenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 600, 20));
 
         Create.setBackground(new java.awt.Color(240, 240, 240));
@@ -197,6 +197,7 @@ public class InterfazCRUD extends javax.swing.JFrame {
         SignOut.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         SignOut.setForeground(new java.awt.Color(255, 255, 255));
         SignOut.setText("Cerrar Sesión");
+        SignOut.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         SignOut.setFocusable(false);
         SignOut.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -217,7 +218,7 @@ public class InterfazCRUD extends javax.swing.JFrame {
                 SignOutActionPerformed(evt);
             }
         });
-        body.add(SignOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 150, -1));
+        body.add(SignOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 310, 150, 30));
         body.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 370));
 
         getContentPane().add(body, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 600, 370));
@@ -321,9 +322,11 @@ public class InterfazCRUD extends javax.swing.JFrame {
     }//GEN-LAST:event_CreateMouseClicked
 
     private void SignOutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SignOutMouseEntered
+        setCursor(new Cursor(HAND_CURSOR));
     }//GEN-LAST:event_SignOutMouseEntered
 
     private void SignOutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SignOutMouseExited
+        setCursor(new Cursor(NORMAL));
     }//GEN-LAST:event_SignOutMouseExited
 
     private void SignOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignOutActionPerformed

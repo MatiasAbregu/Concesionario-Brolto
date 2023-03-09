@@ -125,7 +125,7 @@ public class InterfazInicio extends javax.swing.JFrame {
         campoUsuario.setFont(new java.awt.Font("Britannic Bold", 0, 16)); // NOI18N
         campoUsuario.setForeground(new java.awt.Color(102, 153, 255));
         campoUsuario.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        campoUsuario.setBorder(null);
+        campoUsuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         campoUsuario.setCaretColor(new java.awt.Color(204, 204, 204));
         body.add(campoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 190, 22));
 
@@ -133,7 +133,7 @@ public class InterfazInicio extends javax.swing.JFrame {
         campoContra.setFont(new java.awt.Font("Britannic Bold", 0, 16)); // NOI18N
         campoContra.setForeground(new java.awt.Color(102, 153, 255));
         campoContra.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        campoContra.setBorder(null);
+        campoContra.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         campoContra.setCaretColor(new java.awt.Color(204, 204, 204));
         body.add(campoContra, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, 190, 22));
 
@@ -153,10 +153,17 @@ public class InterfazInicio extends javax.swing.JFrame {
         IniciarSesion.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         IniciarSesion.setForeground(new java.awt.Color(255, 255, 255));
         IniciarSesion.setText("Iniciar Sesion");
+        IniciarSesion.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         IniciarSesion.setFocusable(false);
         IniciarSesion.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 IniciarSesionMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                IniciarSesionMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                IniciarSesionMouseExited(evt);
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 IniciarSesionMousePressed(evt);
@@ -175,7 +182,7 @@ public class InterfazInicio extends javax.swing.JFrame {
         leyenda.setFont(new java.awt.Font("Arial", 2, 12)); // NOI18N
         leyenda.setForeground(new java.awt.Color(255, 255, 255));
         leyenda.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        leyenda.setText("© Derechos reservados a Matias Abregú - 2022");
+        leyenda.setText("© Derechos reservados a Matias Abregú - 2023");
         body.add(leyenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 350, 20));
         body.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 350, 420));
 
@@ -262,6 +269,14 @@ public class InterfazInicio extends javax.swing.JFrame {
             System.out.println("¡No se pudo conectar a la base de datos!");
         }
     }//GEN-LAST:event_IniciarSesionActionPerformed
+
+    private void IniciarSesionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IniciarSesionMouseEntered
+        setCursor(new Cursor(HAND_CURSOR));
+    }//GEN-LAST:event_IniciarSesionMouseEntered
+
+    private void IniciarSesionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IniciarSesionMouseExited
+        setCursor(new Cursor(NORMAL));
+    }//GEN-LAST:event_IniciarSesionMouseExited
  
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
