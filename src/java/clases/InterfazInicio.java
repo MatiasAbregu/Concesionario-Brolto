@@ -265,6 +265,10 @@ public class InterfazInicio extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "¡El usuario o la contraseña es incorrecto!");
             }
             
+            cn.conectar().close();
+            pst.close();
+            rs.close();
+            
         } catch (SQLException ex) {
             System.out.println("¡No se pudo conectar a la base de datos!");
         }

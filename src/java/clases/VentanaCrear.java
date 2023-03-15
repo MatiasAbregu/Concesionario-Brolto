@@ -249,6 +249,7 @@ public class VentanaCrear extends javax.swing.JFrame {
         textMarca.setForeground(new java.awt.Color(255, 255, 255));
         textMarca.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         textMarca.setCaretColor(new java.awt.Color(255, 255, 255));
+        textMarca.setSelectionColor(new java.awt.Color(51, 51, 255));
         body.add(textMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 220, 25));
 
         textDescripcion.setBackground(new java.awt.Color(51, 51, 51));
@@ -258,6 +259,7 @@ public class VentanaCrear extends javax.swing.JFrame {
         textDescripcion.setRows(5);
         textDescripcion.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         textDescripcion.setCaretColor(new java.awt.Color(255, 255, 255));
+        textDescripcion.setSelectionColor(new java.awt.Color(51, 51, 255));
         jScrollPane1.setViewportView(textDescripcion);
 
         body.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 60, 270, 260));
@@ -447,6 +449,9 @@ public class VentanaCrear extends javax.swing.JFrame {
                 pst.setBlob(4, imagenBlob);
                 
                 pst.executeUpdate();
+                
+                cn.conectar().close();
+                pst.close();
                 
             }catch(SQLException e){
                 JOptionPane.showMessageDialog(null, "¡Hubo un error en la base de datos!");

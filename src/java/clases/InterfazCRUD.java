@@ -162,6 +162,9 @@ public class InterfazCRUD extends javax.swing.JFrame {
 
         Update.setBackground(new java.awt.Color(240, 240, 240));
         Update.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                UpdateMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 UpdateMouseEntered(evt);
             }
@@ -342,6 +345,12 @@ public class InterfazCRUD extends javax.swing.JFrame {
     private void SignOutMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SignOutMouseReleased
         setCursor(new Cursor(NORMAL));
     }//GEN-LAST:event_SignOutMouseReleased
+
+    private void UpdateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UpdateMouseClicked
+        InterfazRead ir =new InterfazRead(usuario);
+        ir.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_UpdateMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Cerrar;
