@@ -172,10 +172,13 @@ public class InterfazCRUD extends javax.swing.JFrame {
                 UpdateMouseExited(evt);
             }
         });
-        body.add(Update, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 100, 100));
+        body.add(Update, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 100, 100));
 
         Read.setBackground(new java.awt.Color(240, 240, 240));
         Read.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ReadMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 ReadMouseEntered(evt);
             }
@@ -183,7 +186,7 @@ public class InterfazCRUD extends javax.swing.JFrame {
                 ReadMouseExited(evt);
             }
         });
-        body.add(Read, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 100, 100));
+        body.add(Read, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 100, 100));
 
         Delete.setBackground(new java.awt.Color(240, 240, 240));
         Delete.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -347,10 +350,16 @@ public class InterfazCRUD extends javax.swing.JFrame {
     }//GEN-LAST:event_SignOutMouseReleased
 
     private void UpdateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UpdateMouseClicked
+       InterfazUpdate iu = new InterfazUpdate(usuario);
+       iu.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_UpdateMouseClicked
+
+    private void ReadMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReadMouseClicked
         InterfazRead ir =new InterfazRead(usuario);
         ir.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_UpdateMouseClicked
+    }//GEN-LAST:event_ReadMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Cerrar;

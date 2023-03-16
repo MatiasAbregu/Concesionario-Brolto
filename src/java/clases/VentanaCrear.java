@@ -222,7 +222,7 @@ public class VentanaCrear extends javax.swing.JFrame {
         VistaImagen.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         VistaImagen.setForeground(new java.awt.Color(255, 255, 255));
         VistaImagen.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        VistaImagen.setText("Aqui se cargara la imagen");
+        VistaImagen.setText("Aqui se cargará la imagen");
         VistaImagen.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 VistaImagenMouseClicked(evt);
@@ -412,7 +412,7 @@ public class VentanaCrear extends javax.swing.JFrame {
 
     private void VistaImagenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VistaImagenMouseClicked
         if (imagenSeleccionada != null) {
-            VentanaDeImagen ventanaImagen = new VentanaDeImagen(this, true, imagenSeleccionada.getAbsolutePath());
+            VentanaDeImagen ventanaImagen = new VentanaDeImagen(this, true, imagenSeleccionada.getAbsolutePath(), null);
             ventanaImagen.setVisible(true);
         }
     }//GEN-LAST:event_VistaImagenMouseClicked

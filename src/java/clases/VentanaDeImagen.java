@@ -2,6 +2,7 @@ package clases;
 
 import java.awt.*;
 import static java.awt.Frame.*;
+import java.awt.image.BufferedImage;
 import javax.swing.*;
 
 /**
@@ -9,27 +10,34 @@ import javax.swing.*;
  */
 public class VentanaDeImagen extends javax.swing.JDialog {
 
-    public VentanaDeImagen(java.awt.Frame parent, boolean modal, String url) {
+    public VentanaDeImagen(java.awt.Frame parent, boolean modal, String url, BufferedImage imagenConvertida) {
         super(parent, modal);
         initComponents();
 
         setTitle("Brolto - Muestra de Imagen Agrandada");
         setLocationRelativeTo(null);
         setResizable(false);
-        
+
         ImageIcon imagenFondo = new ImageIcon("src/java/img/fondo.jpg");
         Icon iconoFondo = new ImageIcon(imagenFondo.getImage().getScaledInstance(fondo1.getWidth(), fondo1.getHeight(), Image.SCALE_DEFAULT));
         fondo1.setIcon(iconoFondo);
-        
-        ImageIcon imagenRecibida = new ImageIcon(url);
-        Icon iconoRecibido = new ImageIcon(imagenRecibida.getImage().getScaledInstance(VistaImagen.getWidth(), VistaImagen.getHeight(), Image.SCALE_DEFAULT));
-        VistaImagen.setIcon(iconoRecibido);
+
+        if (url.isEmpty() == false) {
+            ImageIcon imagenRecibida = new ImageIcon(url);
+            Icon iconoRecibido = new ImageIcon(imagenRecibida.getImage().getScaledInstance(VistaImagen.getWidth(), VistaImagen.getHeight(), Image.SCALE_DEFAULT));
+            VistaImagen.setIcon(iconoRecibido);
+        } else {
+            ImageIcon imagenRecibida = new ImageIcon(imagenConvertida);
+            Icon iconoRecibido = new ImageIcon(imagenRecibida.getImage().getScaledInstance(VistaImagen.getWidth(), VistaImagen.getHeight(), Image.SCALE_DEFAULT));
+            VistaImagen.setIcon(iconoRecibido);
+        }
+
     }
 
-    public Image getIconImage(){
+    public Image getIconImage() {
         return Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("img/ConcesionarioBroltoBlanco.png"));
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -45,7 +53,6 @@ public class VentanaDeImagen extends javax.swing.JDialog {
         setIconImage(getIconImage());
         setMinimumSize(new java.awt.Dimension(450, 450));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(450, 450));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         header1.setBackground(new java.awt.Color(51, 51, 51));
@@ -69,24 +76,24 @@ public class VentanaDeImagen extends javax.swing.JDialog {
                 Cerrar1MouseExited(evt);
             }
         });
-        header1.add(Cerrar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 30));
+        header1.add(Cerrar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 30));
 
-        getContentPane().add(header1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, -1));
+        getContentPane().add(header1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, -1));
 
         body1.setBackground(new java.awt.Color(102, 102, 102));
         body1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        body1.add(VistaImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 400, 370));
+        body1.add(VistaImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 530, 370));
 
         leyenda1.setFont(new java.awt.Font("Arial", 2, 12)); // NOI18N
         leyenda1.setForeground(new java.awt.Color(255, 255, 255));
         leyenda1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         leyenda1.setText("© Derechos reservados a Matias Abregú - 2023");
-        body1.add(leyenda1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 450, 20));
+        body1.add(leyenda1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 550, 20));
 
         fondo1.setBackground(new java.awt.Color(102, 102, 102));
-        body1.add(fondo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 420));
+        body1.add(fondo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 420));
 
-        getContentPane().add(body1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 450, 420));
+        getContentPane().add(body1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 550, 420));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -16,7 +16,7 @@ public class InterfazRead extends javax.swing.JFrame {
     public InterfazRead(String usuarioRecibido) {
         initComponents();
         usuario = usuarioRecibido;
-        JOptionPane.showMessageDialog(null, "¡Para visualizar la imagen se pide encarecidamente que se vea desde el Update, gracias!");
+        JOptionPane.showMessageDialog(null, "¡Para visualizar la imagen se pide encarecidamente que se vea desde la interfaz actualizar, gracias!");
         
         setLocationRelativeTo(null);
         setResizable(false);
