@@ -190,6 +190,9 @@ public class InterfazCRUD extends javax.swing.JFrame {
 
         Delete.setBackground(new java.awt.Color(240, 240, 240));
         Delete.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DeleteMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 DeleteMouseEntered(evt);
             }
@@ -322,7 +325,7 @@ public class InterfazCRUD extends javax.swing.JFrame {
     }//GEN-LAST:event_DeleteMouseExited
 
     private void CreateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateMouseClicked
-        VentanaCrear vc = new VentanaCrear(usuario);
+        InterfazCreate vc = new InterfazCreate(usuario);
         vc.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_CreateMouseClicked
@@ -360,6 +363,12 @@ public class InterfazCRUD extends javax.swing.JFrame {
         ir.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_ReadMouseClicked
+
+    private void DeleteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DeleteMouseClicked
+       InterfazDelete id = new InterfazDelete(usuario);
+       id.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_DeleteMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Cerrar;

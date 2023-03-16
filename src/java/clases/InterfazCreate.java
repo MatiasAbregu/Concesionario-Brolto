@@ -13,7 +13,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 /**
  * @author Matias
  */
-public class VentanaCrear extends javax.swing.JFrame {
+public class InterfazCreate extends javax.swing.JFrame {
 
     private int x, y;
     private String usuario = "";
@@ -21,7 +21,7 @@ public class VentanaCrear extends javax.swing.JFrame {
     private ImageIcon imagenMuestra;
     private Icon iconoMuestra;
 
-    public VentanaCrear(String usuarioRecibido) {
+    public InterfazCreate(String usuarioRecibido) {
         initComponents();
         setResizable(false);
         setLocationRelativeTo(null);
@@ -457,7 +457,7 @@ public class VentanaCrear extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "¡Hubo un error en la base de datos!");
                 System.out.println(e);
             } catch (IOException ex) {
-                Logger.getLogger(VentanaCrear.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(InterfazCreate.class.getName()).log(Level.SEVERE, null, ex);
             }
             
             JOptionPane.showMessageDialog(null, "¡Se creó con éxito!");
