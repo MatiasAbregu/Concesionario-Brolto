@@ -1,0 +1,47 @@
+html{
+    font-family: 'Teko', sans-serif;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background-color: black;
+    max-height: 18vh;
+    color: white;
+    top: 0px;
+    position: sticky;
+}
+
+#Logo{
+    margin-top: -3vh;
+    width: 25vh;
+    height: 25vh;
+    margin-left: 3vh;
+}
+
+header nav{
+    float: right;
+}
+
+nav ul li{
+    font-size: 5vh;
+    margin: 3.5vh 4vh;
+    display: inline-block;
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    transition: ease-out 0.3s;
+    color: white;
+}
+
+nav ul li a:hover{
+    padding-left: 1vh;
+    border-left: solid 0.5vh #2271B3;
+    color: #2271B3;
+}
