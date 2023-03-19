@@ -54,9 +54,9 @@
             <nav>
                 <ul>
                     <li><a href="Inicio.html">Inicio</a></li>
-                    <li><a href="#tituloNovedades">Novedades</a></li>
+                    <li><a href="Inicio.html#tituloNovedades">Novedades</a></li>
                     <li><a href="Catalogo.jsp">Catálogo</a></li>
-                    <li id="margenMarca"><a href="#MarcasDeAutos">Marcas de Autos</a></li>
+                    <li id="margenMarca"><a href="Inicio.html#MarcasDeAutos">Marcas de Autos</a></li>
                 </ul>
             </nav>
         </header>
@@ -91,7 +91,7 @@
                     }
 
                     .articulosDeVehiculos:hover h2{
-                        animation: animacionSlide 0.6s infinite linear;
+                        animation: animacionSlide 0.7s infinite linear;
                     }
 
                     @keyframes animacionSlide{
@@ -138,5 +138,10 @@
                 </article>
              </c:forEach>
         </section>
+        
+        <footer>
+            <p>© Derechos reservados a Matias Abregú 2023</p>
+            <a href="https://api.whatsapp.com/send?phone=3512753590" target="_blank">Contactame aqui</a>
+        </footer>
    </body>
 </html>

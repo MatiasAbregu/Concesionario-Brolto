@@ -45,3 +45,28 @@ nav ul li a:hover{
     border-left: solid 0.5vh #2271B3;
     color: #2271B3;
 }
+
+footer{
+    font-size: 5vh;
+    background-color: black;
+}
+
+footer p{
+    color: white;
+    margin-left: 5vh;
+    float: left;
+}
+
+
+footer a{
+    color: white;
+    float: right;
+    margin-right: 5vh;
+    margin-top: 4.7vh;
+    text-decoration: none;
+    transition: ease-out 0.4s;
+}
+
+footer a:hover{
+    color: #2271B3;
+}
