@@ -65,15 +65,62 @@
         <section>
             <c:forEach var="vehiculosARecorrer" items="${vehiculos}">
                 <style>
+                    section{
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+
+                    hr{
+                        margin-top: -1.3vh;
+                        border: 0.4vh solid black;
+                    }
+
                     .articulosDeVehiculos{
-                        border: 1vh solid black;
-                        border-radius: 1.5vh; 
+                        text-align: center;
+                        margin: 1.5% 1.25% 1.5% 1.25%;
+                        border: 0.7vh solid black;
+                        border-radius: 1.5vh;
                         width: 30%;
                         display: inline-block;
+                        transition: ease-out 0.3s;
                     }
-                    
+
+                    .articulosDeVehiculos:hover{
+                        transform: scale(1.025,1.025);
+                        cursor: pointer;
+                    }
+
+                    .articulosDeVehiculos:hover h2{
+                        animation: animacionSlide 0.6s infinite linear;
+                    }
+
+                    @keyframes animacionSlide{
+                        0%{
+                            background-image: linear-gradient(to right, rgba(34, 113, 179, 0.5), rgba(34, 113, 179, 1), rgba(34, 113, 179, 0.1))
+                        }
+                        50%{
+                            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(34, 113, 179, 0.5), rgba(34, 113, 179, 1))
+                        }
+                        100%{
+                            background-image: linear-gradient(to right, rgba(34, 113, 179, 1), rgba(34, 113, 179, 0.5), rgba(0, 0, 0, 0))
+                        }
+                    }
+
+                    .articulosDeVehiculos h2{
+                        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(34, 113, 179, 1), rgba(0, 0, 0, 0));
+                        color: white;
+                        font-size: 6vh;
+                        margin-top: -1.3vh;
+                    }
+
                     .articulosDeVehiculos img{
+                        border-radius: 1.2vh;
                         width: 100%;
+                    }
+
+                    .articulosDeVehiculos h3{
+                        font-size: 5vh;
+                        margin: -4vh 0 4vh 0;
                     }
                 </style>
                 <br><br>
@@ -88,8 +135,8 @@
                     <hr>
                     <h2>${vehiculosARecorrer.getModelo()}</h2>
                     <h3>Marca: ${vehiculosARecorrer.getMarca()} <h3>
-                            </article>
-                        </c:forEach>
-         </section>
-    </body>
+                </article>
+             </c:forEach>
+        </section>
+   </body>
 </html>
