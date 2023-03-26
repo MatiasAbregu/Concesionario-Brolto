@@ -13,16 +13,28 @@ import javax.imageio.ImageIO;
  */
 public class Vehiculo {
 
+    private int ID;
     private String modelo, marca, descripcion;
     private Blob imagenBlob;
 
-    public Vehiculo(String modelo, String marca, String descripcion, Blob imagen) {
+    public Vehiculo(int ID, String modelo, String marca, Blob imagen) {
+        this.ID = ID;
+        this.modelo = modelo;
+        this.marca = marca;
+        imagenBlob = imagen;
+    }
+    
+    public Vehiculo(String modelo, String marca, String descripcion, Blob imagen){
         this.modelo = modelo;
         this.marca = marca;
         this.descripcion = descripcion;
         imagenBlob = imagen;
     }
-
+    
+    public int getID(){
+        return ID;
+    }
+    
     public String getModelo() {
         return modelo;
     }
@@ -38,12 +50,4 @@ public class Vehiculo {
     public Blob getImagen(){
         return imagenBlob;
     }
-    
-    /*
-    public BufferedImage getImagen() throws IOException, SQLException {
-        InputStream imagenConversor = imagenBlob.getBinaryStream();
-        BufferedImage imagenConvertida = ImageIO.read(imagenConversor);
-        return imagenConvertida;
-    }*/
-
 }
