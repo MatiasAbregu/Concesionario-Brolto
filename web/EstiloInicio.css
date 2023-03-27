@@ -105,10 +105,30 @@ nav ul li a:hover{
 }
 
 .imagenesNaveg{
+    padding-top: 0.5vh;
+    border-radius: 3.5vh;
+}
+
+.imagenesNaveg:hover{
+    cursor: pointer;
+}
+
+.botonEspecial{
+    padding: 0.7vh 1.2vh;
     margin-top: 4vh;
-    border: 0.6vh solid black;
-    border-radius: 3vh;
-    width: 50%;
+    background-image: linear-gradient(to right, black, rgba(34, 113, 179, 1));
+    border-radius: 4vh;
+    border: hidden;
+    transition: ease 0.4s;
+    animation: animacionSlide linear infinite 1s;
+}
+.botonEspecial:hover{
+    transform: scale(1.025);
+}
+
+@keyframes animacionSlide{
+        from {background-image: linear-gradient(to right, black, rgba(34, 113, 179, 1));}
+        to {background-image: linear-gradient(to right, rgba(34, 113, 179, 1), black);}
 }
 
 #GrupoRadio{
@@ -163,7 +183,6 @@ nav ul li a:hover{
 
 .logos{
     border: 1vh solid #2271B3;
-    margin-left: 5vh;
     border-radius: 50%;
     background-image: linear-gradient(90deg, black, white);
     transition: 0.5s ease;
@@ -172,6 +191,13 @@ nav ul li a:hover{
 .logos:hover{
     cursor: pointer;
     border-radius: 25%;
+}
+
+.botonIMG{
+    margin-left: 10vh;
+    border: hidden;
+    background: white;
+    border-radius: 30vh;
 }
 
 #porqueConfiar{

@@ -34,73 +34,86 @@
         </section>
 
         <section>
-            <h2 class="titulos" id="tituloNovedades">NOVEDADES</h2>
-            <article class="articuloAutos" id="novFord">
-                <img class="imagenesNaveg" src="img/FordMustang.png"/>
-                <h2>Lleva hoy uno de los mejores y más vendidos coches deportivos: Ford Mustang (2022)</h2>
-            </article>
-            <article class="articuloAutos" id="novChev">
-                <img class="imagenesNaveg" src="img/ChevroletCamaro.png"/>
-                <h2>Uno de los coches deportivos más imponentes y equilibrados del mercado: Chevrolet Camaro (2022)</h2>
-            </article>
-            <article class="articuloAutos" id="novBMW">
-                <img class="imagenesNaveg" src="img/BMW_Serie_2_Coupe.png"/>
-                <h2>Elegante y rápido, llega para hacer gala de su belleza: BMW Serie 2 Coupe 2022</h2>
-            </article>
-            <article class="articuloAutos" id="novAudi">
-                <img class="imagenesNaveg" src="img/AUDI-E-TRON-GT.png"/>
-                <h2>Audi nos impresiona con su nuevo coche deportivo eléctrico: E-Tron GT 2022</h2>
-            </article>
-            <article class="articuloAutos" id="novPorsche">
-                <img class="imagenesNaveg" src="img/porsche-taycan-gts-2022.png"/>
-                <h2>Este coche deportivo excelente por su rendimiento y prestigioso por su gran marca: Porsche Taycan GTS 2022</h2>
-            </article>
+            <form action="MostrarVehiculo.jsp" method="post">
+                <h2 class="titulos" id="tituloNovedades">NOVEDADES</h2>
+                <article class="articuloAutos" id="novFord">
+                    <button class="botonEspecial" name="ID" value="5">
+                        <img class="imagenesNaveg" src="img/FordMustang.png"/>
+                    </button>
+                    <h2>Lleva hoy uno de los mejores y más vendidos coches deportivos: Ford Mustang (2022)</h2>
+                </article>
+                <article class="articuloAutos" id="novChev">
+                    <button class="botonEspecial" name="ID" value="2">
+                        <img class="imagenesNaveg" src="img/ChevroletCamaro.png"/>
+                    </button>
+                    <h2>Uno de los coches deportivos más imponentes y equilibrados del mercado: Chevrolet Camaro (2022)</h2>
+                </article>
+                <article class="articuloAutos" id="novBMW">
+                    <button class="botonEspecial" name="ID" value="3">
+                        <img class="imagenesNaveg" src="img/BMW_Serie_2_Coupe.png"/>
+                    </button>
+                    <h2>Elegante y rápido, llega para hacer gala de su belleza: BMW Serie 2 Coupe 2022</h2>
+                </article>
+                <article class="articuloAutos" id="novAudi">
+                    <button class="botonEspecial" name="ID" value="4">
+                        <img class="imagenesNaveg" src="img/AUDI-E-TRON-GT.png"/>
+                    </button>
+                    <h2>Audi nos impresiona con su nuevo coche deportivo eléctrico: E-Tron GT 2022</h2>
+                </article>
+                <article class="articuloAutos" id="novPorsche">         
+                    <button class="botonEspecial" name="ID" value="6">
+                        <img class="imagenesNaveg" src="img/porsche-taycan-gts-2022.png"/>
+                    </button>
+                    <h2>Este coche deportivo excelente por su rendimiento y prestigioso por su gran marca: Porsche Taycan GTS 2022</h2>
+                </article>
+            </form>
+
             <article id="GrupoRadio">
                 <label class="custom-boton">
-                <input type="radio" id="radioFord" name="radios" onchange="seleccion(1);" checked="true"/>
-                <span class="checkmark" ></span>
+                    <input type="radio" id="radioFord" name="radios" onchange="seleccion(1);" checked="true"/>
+                    <span class="checkmark" ></span>
                 </label>
                 <label class="custom-boton">
-                <input type="radio" id="radioChev" name="radios" onchange="seleccion(2);"/>
-                <span class="checkmark"></span>
+                    <input type="radio" id="radioChev" name="radios" onchange="seleccion(2);"/>
+                    <span class="checkmark"></span>
                 </label>
                 <label class="custom-boton">
-                <input type="radio" id="radioBMW" name="radios" onchange="seleccion(3);"/>
-                <span class="checkmark"></span>
+                    <input type="radio" id="radioBMW" name="radios" onchange="seleccion(3);"/>
+                    <span class="checkmark"></span>
                 </label>
                 <label class="custom-boton">
-                <input type="radio" id="radioAudi" name="radios" onchange="seleccion(4);"/>
-                <span class="checkmark"></span>
+                    <input type="radio" id="radioAudi" name="radios" onchange="seleccion(4);"/>
+                    <span class="checkmark"></span>
                 </label>
                 <label class="custom-boton">
-                <input type="radio" id="radioPorsche" name="radios" onchange="seleccion(5);"/>
-                <span class="checkmark"></span>
+                    <input type="radio" id="radioPorsche" name="radios" onchange="seleccion(5);"/>
+                    <span class="checkmark"></span>
                 </label>
             </article>
         </section>
-        
+
         <section>
             <h2 class="titulos" id="MarcasDeAutos">Marcas de autos</h2>
-            <article id="logosCenter">
-                <h2 id="tituloDePresentacionLogos">Trabajamos con las mejores y más prestigiosas marcas del mundo: Ford, Chevrolet, BMW, Audi y Porsche</h2>
-                <img class="logos" src="img/FordLogo.png"/>
-                <img class="logos" src="img/ChevroletLogo.png"/>
-                <img class="logos" src="img/BMWLogo.png"/>
-                <img class="logos" src="img/AudiLogo.png"/>
-                <img class="logos" src="img/PorscheLogo.png"/>
-            </article>
+            <form id="logosCenter" action="Catalogo.jsp" method="get">
+                <h2 id="tituloDePresentacionLogos">Trabajamos con las mejores y más prestigiosas marcas del mundo: Ford, Chevrolet, BMW, Audi y Porsche</h2>            
+                <button class="botonIMG" type="submit" name="marca" value="Ford"><img class="logos" src="img/FordLogo.png"/></button>
+                <button class="botonIMG" type="submit" name="marca" value="Chevrolet"><img class="logos" src="img/ChevroletLogo.png"/></button>
+                <button class="botonIMG" type="submit" name="marca" value="BMW"><img class="logos" src="img/BMWLogo.png"/></button>
+                <button class="botonIMG" type="submit" name="marca" value="Audi"><img class="logos" src="img/AudiLogo.png"/></button>
+                <button class="botonIMG" type="submit" name="marca" value="Porsche"><img class="logos" src="img/PorscheLogo.png"/></button>
+            </form>
         </section>
 
         <section>
             <h2 class="titulos">¿Por qué comprar en Brolto?</h2>
             <article id="porqueConfiar">
-                <p>Porque en Brolto somos 100% confiables ademas de que brindamos la mejor atención al cliente, nuestro lema es: "El cliente es la prioridad".
-                Grandes marcas como Porsche o Chevrolet confían en nostros por nuestra gran capacidad para brindar un excelente servicio y compromiso tanto
-                con clientes como proveedores. Somos una empresa internacional destinada desde vender coches de la mejor calidad posible hasta brindar atención
-                a los vehiculos de los clientes que nos han comprado, haciendo posible que nuestros clientes se sientan lo más satisfechos posibles.</p>
+                <p>Porque en Brolto somos 100% confiables además de que brindamos la mejor atención al cliente, nuestro lema es: "El cliente es la prioridad".
+                    Grandes marcas como Porsche o Chevrolet confían en nostros por nuestra gran capacidad para brindar un excelente servicio y compromiso tanto
+                    con clientes como proveedores. Somos una empresa internacional destinada desde vender coches de la mejor calidad posible hasta brindar atención
+                    a los vehiculos de los clientes que nos han comprado, haciendo posible que nuestros clientes se sientan lo más satisfechos posibles.</p>
             </article>
         </section>
-        
+
         <footer>
             <p>© Derechos reservados a Matias Abregú 2023</p>
             <a href="https://api.whatsapp.com/send?phone=3512753590" target="_blank">Contactame aqui</a>

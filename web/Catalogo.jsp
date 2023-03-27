@@ -28,6 +28,7 @@
     </head>
 
     <%
+        String tipoDeMarca = request.getParameter("marca");
         Class.forName("com.mysql.jdbc.Driver");
 
         ArrayList<Vehiculo> listaVehiculos = new ArrayList<Vehiculo>();
@@ -38,7 +39,29 @@
             ResultSet rs = pst.executeQuery();
 
             while (rs.next()) {
-                listaVehiculos.add(new Vehiculo(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getBlob(5)));
+                if (tipoDeMarca == null) {
+                    listaVehiculos.add(new Vehiculo(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getBlob(5)));
+                } else if (tipoDeMarca.equals("Ford")) {
+                    if (rs.getString(3).toLowerCase().equals("ford")) {
+                    listaVehiculos.add(new Vehiculo(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getBlob(5)));
+                    }
+                } else if (tipoDeMarca.equals("Chevrolet")) {
+                    if (rs.getString(3).toLowerCase().equals("chevrolet")) {
+                    listaVehiculos.add(new Vehiculo(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getBlob(5)));
+                    }
+                } else if (tipoDeMarca.equals("BMW")) {
+                    if (rs.getString(3).toLowerCase().equals("bmw")) {
+                    listaVehiculos.add(new Vehiculo(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getBlob(5)));
+                    }
+                } else if (tipoDeMarca.equals("Audi")) {
+                    if (rs.getString(3).toLowerCase().equals("audi")) {
+                    listaVehiculos.add(new Vehiculo(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getBlob(5)));
+                    }
+                } else if (tipoDeMarca.equals("Porsche")) {
+                    if (rs.getString(3).toLowerCase().equals("porsche")) {
+                    listaVehiculos.add(new Vehiculo(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getBlob(5)));
+                    }
+                }
             }
 
         } catch (Exception e) {
@@ -62,7 +85,8 @@
         </header>
 
 
-        <section>
+        <section>         
+            <br><br><br>
             <style>
                 section{
                     display: flex;
